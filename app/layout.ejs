@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="shortcut icon" href="./assets/images/logo.svg">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icon  -->
+    <script src="https://kit.fontawesome.com/557c7a0410.js" crossorigin="anonymous"></script>
+    <!-- 自定義CSS -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="bg-light border-bottom border-primary sticky-top">
+      <div class="container-fluid container-lg px-0 px-lg-3">
+        <nav class="navbar navbar-expand-lg p-0">
+          <h1 class="py-4 py-lg-8 ps-3 ps-lg-0 flex-grow-1">
+            <a href="index.html">
+              <img class="logo-icon" src="./assets/images/logo.svg" alt="logo-ART NFT"
+              class="img-fluid">
+            </a>
+          </h1>
+          <form class="px-lg-9 ms-auto border-lg-start border-primary d-none d-lg-flex">
+            <input class="form-control bg-light border-0 navbar-search-input px-3 py-lg-10" id="search" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+            <button class="btn border-0 py-3 hover-link-text-secondary" type="submit">
+              <i class="fa-solid fa-magnifying-glass fs-5 fs-lg-3 align-middle"></i>
+            </button>
+          </form>
+          <a class="p-3 d-lg-none navbar-search" role="button">
+            <i class="fa-solid fa-magnifying-glass align-middle fs-5 hover-link-text-secondary"></i>
+          </a>
+          <a class="navbar-toggler border-0 py-3 navbar-menu hover-link-text-secondary" role="button" data-bs-toggle="collapse" data-bs-target="#navbarMenuContent "aria-controls="navbarMenuContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-5 align-middle"></i>
+          </a>
+          <a class="navbar-toggler border-0 py-3 navbar-close d-none hover-link-text-secondary" role="button" data-bs-toggle="collapse" data-bs-target="#navbarMenuContent "aria-controls="navbarMenuContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-xmark fs-5 align-middle"></i>
+          </a>
+
+          <div class="collapse navbar-collapse justify-content-lg-end flex-grow-0 border-top border-dark border-lg-top-0 bg-white bg-lg-transparent" id="navbarMenuContent">
+            <ul class="navbar-nav text-center px-3 px-lg-0 menu">
+              <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start border-primary">
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="index.html">探索</a>
+              </li>
+              <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start border-primary">
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="courses.html">市值</a>
+              </li>
+              <li class="nav-item border-lg-start border-primary">
+                <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  <i class="fa-solid fa-wallet fs-3 d-none d-lg-block"></i>
+                  <span class="d-lg-none">連結錢包</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- 搜尋 -->
+        <div class="navbar-search-bar w-100 bg-light d-none d-lg-none">
+          <form class="d-flex align-items-center">
+            <a class="p-3 border-0 lh-1 navbar-search hover-link-text-secondary" href="#">
+              <i class="fa-solid fa-angle-left align-middle fs-5"></i>
+            </a>
+            <input class="form-control bg-light border-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+            <button class="btn border-0 py-3 hover-link-text-secondary" type="submit">
+              <i class="fa-solid fa-magnifying-glass fs-5 fs-lg-3 align-middle"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <%- contents %>
+
+    <footer class="text-center border-top border-1">
+      <div class="border-top border-4 mt-2">
+        <p class="ff-NotoSansTC py-6">© ART NFT. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

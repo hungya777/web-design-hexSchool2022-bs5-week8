@@ -1,0 +1,21 @@
+body {
+  font-family: 'Squada One', cursive, 'Noto Sans TC', sans-serif;
+  background-color: $light;
+}
+// * {
+//   outline: 1px solid $danger;
+// }
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;  //防止圖片變形
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 0px;
+  line-height: 0;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,62 @@
+// 推薦系列
+.recommend-img {
+  height: 238px;
+  @include media-breakpoint-up(md) {
+    height: 372px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 340px;
+  }
+  &-big {
+    @include media-breakpoint-up(md) {
+      height: 372px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 500px;
+    }
+  }
+}
+.recommend {
+  &-img {
+      height: 238px;
+      @include media-breakpoint-up(md) {
+          height: 372px;
+      }
+  }
+
+  &-img-lg {
+      @include media-breakpoint-up(xl) {
+          height: 500px;
+      }
+  }
+
+  &-img-md {
+      @include media-breakpoint-up(xl) {
+          height: 340px;
+      }
+  }
+}
+
+.btn-triangle {
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "";
+    border-top: 16px solid transparent;
+    border-right: 16px solid $secondary;
+    bottom:0;
+    right:0;
+  }
+  &:hover {
+    &::after{
+      border-right: 16px solid $primary;
+    }
+  }
+}
+
+.hover-link-secondary {
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+}

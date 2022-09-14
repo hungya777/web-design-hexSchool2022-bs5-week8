@@ -1,0 +1,58 @@
+//容器寬度
+.container {
+  max-width: 1320px;  //含左、右各padding 12px
+}
+//文字-字體
+.ff-NotoSansTC {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+//文字-大小
+.fs {
+  @include font-size;
+  @include media-breakpoint-up(sm) {
+    &-sm {
+      @include font-size;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &-lg {
+      @include font-size;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &-xl {
+      @include font-size;
+    }
+  }
+}
+//文字-垂直書寫
+.write-vertical {
+  writing-mode: vertical-lr;
+}
+
+.border {
+  @include media-breakpoint-up(lg) {
+    &-lg {
+      &-top {
+        &-0 {
+          border-top: 0 !important;
+        }
+      }
+      &-bottom {
+        &-0 {
+          border-bottom: 0 !important;
+        }
+      }
+      &-start {
+        border-left: 1px solid $primary;
+      }
+    }
+  }
+}
+
+/*Hover 效果*/
+.hover-link-text-secondary {
+  &:hover {
+    color: $secondary !important;
+  }
+}

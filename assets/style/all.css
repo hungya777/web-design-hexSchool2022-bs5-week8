@@ -17497,15 +17497,57 @@ h1, .h1 {
           writing-mode: vertical-lr;
 }
 
+@media (min-width: 768px) {
+  .border-md-1 {
+    border: 1px solid #000 !important;
+  }
+  .border-md-top-0 {
+    border-top: 0 !important;
+  }
+  .border-md-top-1 {
+    border-top: 1px solid #000 !important;
+  }
+  .border-md-bottom-0 {
+    border-bottom: 0 !important;
+  }
+  .border-md-bottom-1 {
+    border-bottom: 1px solid #000 !important;
+  }
+  .border-md-start-0 {
+    border-left: 0 !important;
+  }
+  .border-md-start-1 {
+    border-left: 1px solid #000 !important;
+  }
+  .border-md-end-0 {
+    border-right: 0 !important;
+  }
+  .border-md-end-1 {
+    border-right: 1px solid #000 !important;
+  }
+}
+
 @media (min-width: 992px) {
+  .border-lg-1 {
+    border: 1px solid #000 !important;
+  }
   .border-lg-top-0 {
     border-top: 0 !important;
+  }
+  .border-lg-top-1 {
+    border-top: 1px solid #000 !important;
   }
   .border-lg-bottom-0 {
     border-bottom: 0 !important;
   }
-  .border-lg-start {
-    border-left: 1px solid #000;
+  .border-lg-bottom-1 {
+    border-top: 1px solid #000 !important;
+  }
+  .border-lg-start-1 {
+    border-left: 1px solid #000 !important;
+  }
+  .border-lg-end-1 {
+    border-right: 1px solid #000 !important;
   }
 }
 
@@ -17578,6 +17620,10 @@ h1, .h1 {
   }
 }
 
+.recommend-img-big {
+  height: 238px;
+}
+
 @media (min-width: 768px) {
   .recommend-img-big {
     height: 372px;
@@ -17590,48 +17636,173 @@ h1, .h1 {
   }
 }
 
-.recommend-img {
-  height: 238px;
+@media (min-width: 768px) {
+  .ranking-num {
+    position: absolute;
+    width: 64px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.ranking-img {
+  width: 87px;
+  height: 95px;
 }
 
 @media (min-width: 768px) {
-  .recommend-img {
-    height: 372px;
+  .ranking-img-big {
+    width: 414px;
+    height: 374px;
   }
 }
 
-@media (min-width: 1200px) {
-  .recommend-img-lg {
-    height: 500px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .recommend-img-md {
-    height: 340px;
-  }
-}
-
-.btn-triangle {
+.btn-triangle-primary {
   position: relative;
 }
 
-.btn-triangle::after {
+.btn-triangle-primary::after {
   position: absolute;
-  content: "";
+  content: '';
+  border-top: 16px solid transparent;
+  border-right: 16px solid #000;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-triangle-secondary {
+  position: relative;
+}
+
+.btn-triangle-secondary::after {
+  position: absolute;
+  content: '';
   border-top: 16px solid transparent;
   border-right: 16px solid #E6553B;
   bottom: 0;
   right: 0;
 }
 
-.btn-triangle:hover::after {
+.hover-btn-bg-primary:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.hover-btn-bg-secondary:hover {
+  color: #fff;
+  background-color: #E6553B;
+}
+
+.hover-btn-triangle-primary:hover::after {
   border-right: 16px solid #000;
 }
 
-.hover-link-secondary:hover {
+.hover-btn-triangle-secondary:hover::after {
+  border-right: 16px solid #E6553B;
+}
+
+.hover-btn-border:hover {
+  border: 1px solid #000;
+}
+
+.hover-img-big {
+  position: relative;
+}
+
+.hover-img-big .btn-more {
+  display: none;
+  right: 0;
+  bottom: 0;
+}
+
+.hover-img-big:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  opacity: 0.6;
   color: #fff;
-  background-color: #E6553B;
+}
+
+.hover-img-big:hover .btn-more {
+  display: block;
+  z-index: 1;
+}
+
+.hover-img-small {
+  position: relative;
+}
+
+.hover-img-small .triangle {
+  display: none;
+}
+
+.hover-img-small:hover::after {
+  content: "more";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  opacity: 0.6;
+  color: #fff;
+}
+
+.hover-img-small:hover .triangle {
+  display: block;
+  z-index: 1;
+}
+
+.artist-img {
+  height: 232px;
+}
+
+@media (min-width: 768px) {
+  .artist-img {
+    height: 439px;
+  }
+}
+
+.artist-name {
+  top: 24px;
+  left: 24px;
+}
+
+.artist-more {
+  right: 8px;
+  bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+  .artist-info {
+    width: 304px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */

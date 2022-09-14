@@ -22,3 +22,39 @@
     font-size: $font-size-base * 0.875 !important;  //14px
   }
 }
+
+@mixin size($width, $height:$width) {
+  width: $width;
+  height: $height;
+}
+
+//三角形區塊
+@mixin triangle ($color) {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    border-top: 16px solid transparent;
+    border-right: 16px solid $color;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+//圖片偽元素after
+@mixin img-pseudo-after ($content, $bg-color, $color) {
+  &::after {
+    content: $content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+    opacity: 0.6;
+    color: $color;
+  }
+}

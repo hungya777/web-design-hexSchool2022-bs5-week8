@@ -1,62 +1,160 @@
 // 推薦系列
 .recommend-img {
   height: 238px;
+
   @include media-breakpoint-up(md) {
     height: 372px;
   }
+
   @include media-breakpoint-up(lg) {
     height: 340px;
   }
+
   &-big {
+    height: 238px;
+
     @include media-breakpoint-up(md) {
       height: 372px;
     }
+
     @include media-breakpoint-up(lg) {
       height: 500px;
     }
   }
 }
-.recommend {
+
+// 市價排行榜
+.ranking {
+  &-num {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      width: 64px;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
   &-img {
-      height: 238px;
+    width: 87px;
+    height: 95px;
+    &-big {
       @include media-breakpoint-up(md) {
-          height: 372px;
+        width: 414px;
+        height: 374px;
       }
-  }
-
-  &-img-lg {
-      @include media-breakpoint-up(xl) {
-          height: 500px;
-      }
-  }
-
-  &-img-md {
-      @include media-breakpoint-up(xl) {
-          height: 340px;
-      }
-  }
-}
-
-.btn-triangle {
-  position: relative;
-  &::after{
-    position: absolute;
-    content: "";
-    border-top: 16px solid transparent;
-    border-right: 16px solid $secondary;
-    bottom:0;
-    right:0;
-  }
-  &:hover {
-    &::after{
-      border-right: 16px solid $primary;
     }
   }
 }
 
-.hover-link-secondary {
+//按鈕的三角形顏色
+.btn-triangle {
+  &-primary {
+    @include triangle ($primary);
+  }
+  &-secondary {
+    @include triangle ($secondary);
+  }
+}
+
+//按鈕 hover 效果
+.hover-btn {
+  //按鈕hover的背景色
+  &-bg {
+    &-primary {
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+    &-secondary {
+      &:hover {
+        color: $white;
+        background-color: $secondary;
+      }
+    }
+  }
+  //右下角三角形 hover顏色
+  &-triangle {
+    &-primary {
+      &:hover {
+        &::after {
+          border-right: 16px solid $primary;
+        }
+      }
+    }
+    &-secondary {
+      &:hover {
+        &::after {
+          border-right: 16px solid $secondary;
+        }
+      }
+    }
+  }
+  //按鈕 hover 外框顏色
+  &-border {
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+}
+
+// 圖片hover(大)
+.hover-img-big {
+  position: relative;
+  .btn-more {
+      display: none;
+      right: 0;
+      bottom: 0;
+  }
   &:hover {
-    color: $white;
-    background-color: $secondary;
+    @include img-pseudo-after ('', $primary, $white);
+    .btn-more {
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+// 圖片hover(小)
+.hover-img-small {
+  position: relative;
+  .triangle {
+      display: none;
+  }
+  &:hover {
+    @include img-pseudo-after ('more', $primary, $white);
+    .triangle {
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+// 熱門藝術家
+.artist {
+  &-img {
+      height: 232px;
+      @include media-breakpoint-up(md) {
+          height: 439px;
+      }
+  }
+
+  &-name {
+      top: 24px;
+      left: 24px;
+  }
+
+  &-more {
+      right: 8px;
+      bottom: 8px;
+  }
+
+  &-info {
+      @include media-breakpoint-up(xl) {
+          width: 304px;
+          position: absolute;
+          bottom: 24px;
+          left: 24px;
+      }
   }
 }

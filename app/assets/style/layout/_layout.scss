@@ -7,6 +7,9 @@
   }
 }
 
+.payment-icon {
+  @include size(16px);
+}
 .menu {
   .nav-link {
     &:hover {
@@ -25,17 +28,6 @@
 }
 
 .navbar {
-  // &-line {
-  //     top: 52px;
-  //     @include media-breakpoint-up(lg) {
-  //         top: 104px;
-  //     }
-  // }
-
-  // .fa-solid {
-  //     width: 18px;
-  // }
-
   &-search-bar {
     position: absolute;
     top: 0;
@@ -56,6 +48,25 @@
       &-transparent {
         background-color: transparent !important; //移除背景色
       }
+    }
+  }
+}
+
+//按鈕: 錢包選項
+.btn-payment {
+  border: 1px solid $primary;
+  .fa-check {
+    display: none;
+  }
+  &:hover {
+    border: 2px solid $secondary;
+    margin: -1px;
+  }
+  &:focus {
+    border: 2px solid $secondary;
+    margin: -1px;
+    .fa-check {
+      display: block;
     }
   }
 }

@@ -17639,6 +17639,11 @@ h1, .h1 {
   }
 }
 
+.payment-icon {
+  width: 16px;
+  height: 16px;
+}
+
 .menu .nav-link:hover {
   color: #fff;
   background-color: #E6553B;
@@ -17673,6 +17678,28 @@ h1, .h1 {
   .bg-lg-transparent {
     background-color: transparent !important;
   }
+}
+
+.btn-payment {
+  border: 1px solid #000;
+}
+
+.btn-payment .fa-check {
+  display: none;
+}
+
+.btn-payment:hover {
+  border: 2px solid #E6553B;
+  margin: -1px;
+}
+
+.btn-payment:focus {
+  border: 2px solid #E6553B;
+  margin: -1px;
+}
+
+.btn-payment:focus .fa-check {
+  display: block;
 }
 
 .recommend-img {

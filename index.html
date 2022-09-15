@@ -55,7 +55,7 @@
                 <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="#">市值</a>
               </li>
               <li class="nav-item border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#paymentModal">
                   <i class="fa-solid fa-wallet fs-3 d-none d-lg-block"></i>
                   <span class="d-lg-none">連結錢包</span>
                 </a>
@@ -77,6 +77,79 @@
         </div>
       </div>
     </header>
+
+    <!-- modal: 連結錢包 -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <p class="modal-title fs-4 text-primary" id="paymentModalLabel">連結你的錢包</p>
+            <button type="button" class="btn-close d-md-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body container-fluid pb-0">
+            <div class="row g-2">
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect01.png" alt="connect01">
+                    <span class="ms-4">MetaMask</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect02.png" alt="connect02">
+                    <span class="ms-4">Coinbase Wallet</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect03.png" alt="connect03">
+                    <span class="ms-4">WalletConnect</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect04.png" alt="connect04">
+                    <span class="ms-4">Phantom</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect05.png" alt="connect05">
+                    <span class="ms-4">Glow</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="d-block btn-payment d-flex justify-content-between align-items-center px-4 py-2">
+                  <div>
+                    <img class="payment-icon" src="./assets/images/logo/connect06.png" alt="connect06">
+                    <span class="ms-4">Fortmatic</span>
+                  </div>
+                  <i class="fas fa-check text-danger"></i>
+                </a>
+              </div>
+            </div>            
+          </div>
+          <div class="modal-footer row border-0 justify-content-center">
+            <button type="button" class="col-md-4 btn btn-secondary text-white border px-12 py-2">連結錢包</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main>
   <!-- 推薦系列 -->

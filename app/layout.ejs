@@ -9,11 +9,13 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
     <!-- Font Awesome Icon  -->
     <script src="https://kit.fontawesome.com/557c7a0410.js" crossorigin="anonymous"></script>
-    <!-- Swiper -->
+    <!-- Swiper(輪播) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Masonry (瀑布流排版) -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <!-- 自定義CSS -->
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
@@ -47,10 +49,10 @@
           <div class="collapse navbar-collapse justify-content-lg-end flex-grow-0 border-top border-dark border-lg-top-0 bg-white bg-lg-transparent" id="navbarMenuContent">
             <ul class="navbar-nav text-center px-3 px-lg-0 menu">
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="index.html">探索</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="explore.html">探索</a>
               </li>
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="courses.html">市值</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="#">市值</a>
               </li>
               <li class="nav-item border-lg-start-1 border-primary">
                 <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -83,7 +85,12 @@
         <p class="ff-NotoSansTC py-6">© ART NFT. All Rights Reserved</p>
       </div>
     </footer>
+    <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- imagesloaded: 讓圖片都完整載入後，重新渲染畫面 -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

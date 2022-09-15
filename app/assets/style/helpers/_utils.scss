@@ -6,11 +6,19 @@
 .ff-NotoSansTC {
   font-family: 'Noto Sans TC', sans-serif;
 }
+.ff-PaytoneOne {
+  font-family: 'Paytone One', sans-serif;
+}
 //文字-大小
 .fs {
   @include font-size;
   @include media-breakpoint-up(sm) {
     &-sm {
+      @include font-size;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &-md {
       @include font-size;
     }
   }
@@ -25,11 +33,18 @@
     }
   }
 }
+//文字-粗體
+.fw-lg-bold {
+  @include media-breakpoint-up(lg) {
+    font-weight: bold;
+  }
+}
 //文字-垂直書寫
 .write-vertical {
   writing-mode: vertical-lr;
 }
 
+//邊框
 .border {
   @include media-breakpoint-up(md) {
     &-md {
@@ -88,7 +103,7 @@
           border-bottom: 0 !important;
         }
         &-1 {
-          border-top: 1px solid $primary !important;
+          border-bottom: 1px solid $primary !important;
         }
       }
       &-start {
@@ -110,4 +125,10 @@
   &:hover {
     color: $secondary !important;
   }
+}
+
+//背景透明度
+.bg-opacity-white {
+  --bs-bg-opacity: 0.8;
+  background-color: rgba(($white), var(--bs-bg-opacity)) !important;
 }

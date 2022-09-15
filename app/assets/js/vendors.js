@@ -1,5 +1,6 @@
 $(function() {
-  const artistSwiper = new Swiper(".artist-swiper", {
+  //Swiper 輪播
+  const swiperArtist = new Swiper(".swiper-artist", {
     slidesPerView: 1,
     spaceBetween: 0,
     //多欄
@@ -14,23 +15,21 @@ $(function() {
     pagination: {
       el: ".swiper-pagination"
     },
+    speed: 1000,
+    autoplay: {
+      disableOnInteraction: false,
+      delay: 2500
+    },
   });
 
-  const artIntroductionSwiper = new Swiper(".art-introduction-swiper", {
-    slidesPerView: 2,
-    spaceBetween: 24,
-    //多欄
-    breakpoints: {
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      }
-    },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination"
-    },
+  // imagesLoaded :讓圖片都完整載入後，重新渲染畫面
+  // 首頁
+  $('.artwork').imagesLoaded().progress( function() {
+    $('.artwork').masonry(); // 渲染整個畫面
+  });
+
+  // 探索頁
+  $('.explore').imagesLoaded().progress( function() {
+    $('.explore').masonry(); // 渲染整個畫面
   });
 });

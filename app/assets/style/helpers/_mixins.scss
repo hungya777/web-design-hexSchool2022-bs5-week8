@@ -1,7 +1,13 @@
 // 文字size
 @mixin font-size {
+  &-max {
+    font-size: $font-size-base * 5 !important;  //80px
+  }
   &-1 {
     font-size: $h1-font-size !important;  //48px
+  }
+  &-lg {
+    font-size: $font-size-base * 2.5 !important; //40px
   }
   &-2 {
     font-size: $h2-font-size !important;  //32px
@@ -41,20 +47,18 @@
   }
 }
 
-//圖片偽元素after
-@mixin img-pseudo-after ($content, $bg-color, $color) {
-  &::after {
-    content: $content;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $bg-color;
-    opacity: 0.6;
-    color: $color;
-  }
+//圖片偽元素
+@mixin img-pseudo ($content, $bg-color, $color) {
+  content: $content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  opacity: 0.6;
+  color: $color;
 }

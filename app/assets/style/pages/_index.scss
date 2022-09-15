@@ -34,9 +34,11 @@
       z-index: 1;
     }
   }
+
   &-img {
     width: 87px;
     height: 95px;
+
     &-big {
       @include media-breakpoint-up(md) {
         width: 414px;
@@ -51,6 +53,7 @@
   &-primary {
     @include triangle ($primary);
   }
+
   &-secondary {
     @include triangle ($secondary);
   }
@@ -58,21 +61,24 @@
 
 //按鈕 hover 效果
 .hover-btn {
+
   //按鈕hover的背景色
   &-bg {
     &-primary {
       &:hover {
         color: $white;
-        background-color: $primary;
+        background-color: $primary  !important;
       }
     }
+
     &-secondary {
       &:hover {
         color: $white;
-        background-color: $secondary;
+        background-color: $secondary  !important;
       }
     }
   }
+
   //右下角三角形 hover顏色
   &-triangle {
     &-primary {
@@ -82,6 +88,7 @@
         }
       }
     }
+
     &-secondary {
       &:hover {
         &::after {
@@ -90,6 +97,7 @@
       }
     }
   }
+
   //按鈕 hover 外框顏色
   &-border {
     &:hover {
@@ -101,13 +109,18 @@
 // 圖片hover(大)
 .hover-img-big {
   position: relative;
+
   .btn-more {
-      display: none;
-      right: 0;
-      bottom: 0;
+    display: none;
+    right: 0;
+    bottom: 0;
   }
+
   &:hover {
-    @include img-pseudo-after ('', $primary, $white);
+    &::after {
+      @include img-pseudo ('', $primary, $white);
+    }
+
     .btn-more {
       display: block;
       z-index: 1;
@@ -118,11 +131,16 @@
 // 圖片hover(小)
 .hover-img-small {
   position: relative;
+
   .triangle {
-      display: none;
+    display: none;
   }
+
   &:hover {
-    @include img-pseudo-after ('more', $primary, $white);
+    &::after {
+      @include img-pseudo ('more', $primary, $white);
+    }
+
     .triangle {
       display: block;
       z-index: 1;
@@ -133,28 +151,132 @@
 // 熱門藝術家
 .artist {
   &-img {
-      height: 232px;
-      @include media-breakpoint-up(md) {
-          height: 439px;
-      }
+    height: 232px;
+
+    @include media-breakpoint-up(md) {
+      height: 439px;
+    }
   }
 
   &-name {
-      top: 24px;
+    top: 24px;
+    left: 24px;
+  }
+
+  &-introduce {
+    @include media-breakpoint-up(lg) {
+      width: 304px;
+      position: absolute;
+      bottom: 24px;
       left: 24px;
+    }
   }
 
-  &-more {
-      right: 8px;
-      bottom: 8px;
-  }
+  &-btn {
+    right: 8px;
+    bottom: 8px;
 
-  &-info {
+    @include media-breakpoint-up(lg) {
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}
+
+// Swiper (參考同學寫法)
+.swiper-artist {
+
+  //正中間圖片
+  .swiper-slide {
+    &-active {
       @include media-breakpoint-up(xl) {
-          width: 304px;
-          position: absolute;
-          bottom: 24px;
-          left: 24px;
+        width: 636px !important;
+        height: 439px !important;
+
+        &-name,
+        &-btn,
+        &-introduce {
+          display: block;
+        }
       }
+    }
+
+    //前、後區塊
+    &-prev,
+    &-next {
+      @include media-breakpoint-up(xl) {
+        width: 306px !important;
+        height: 262px !important;
+
+        .artist {
+          &-img {
+            height: 262px;
+            filter: grayscale(100%); //灰階處理
+          }
+
+          &-name,
+          &-btn,
+          &-introduce {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Swiper pagination
+.swiper-pagination {
+  position: unset;
+
+  &-bullet {
+    background-color: $primary;
+    border-radius: 0%;
+    opacity: 1;
+
+    &-active {
+      background-color: $secondary;
+      width: 16px;
+    }
+  }
+}
+
+// artwork 圖片hover效果
+.hover-img-artwork {
+  position: relative;
+  .info {
+    display: none;
+    width: calc(100% - 64px);
+    top: 32px;
+    left: 32px;
+  }
+  .btn-more {
+    display: none;
+    right: 32px;
+    bottom: 32px;
+  }
+
+  &:hover {
+    &::before {
+      @include img-pseudo ('', $primary, $white);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 16px;
+      border: 1px solid $white;
+    }
+    .info {
+      display: inline-block;
+      z-index: 1;
+    }
+    .btn-more {
+      display: block;
+      z-index: 1;
+    }
   }
 }

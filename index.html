@@ -9,11 +9,13 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
     <!-- Font Awesome Icon  -->
     <script src="https://kit.fontawesome.com/557c7a0410.js" crossorigin="anonymous"></script>
-    <!-- Swiper -->
+    <!-- Swiper(輪播) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Masonry (瀑布流排版) -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <!-- 自定義CSS -->
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
@@ -47,10 +49,10 @@
           <div class="collapse navbar-collapse justify-content-lg-end flex-grow-0 border-top border-dark border-lg-top-0 bg-white bg-lg-transparent" id="navbarMenuContent">
             <ul class="navbar-nav text-center px-3 px-lg-0 menu">
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="index.html">探索</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="explore.html">探索</a>
               </li>
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="courses.html">市值</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="#">市值</a>
               </li>
               <li class="nav-item border-lg-start-1 border-primary">
                 <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -121,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 row gx-0 bg-white border-2 border-bottom border-md-1 border-md-1">
+      <div class="col-12 col-lg-6 row gx-0 bg-white border-2 border-bottom border-md-top-1 border-md-bottom-1 border-md-end-1">
         <div class="row gx-0 flex-lg-row-reverse h-100">
           <div class="col-md-6">
             <img src="./assets/images/art03.jpg" alt="art03" class="img-fluid recommend-img">
@@ -157,7 +159,7 @@
         <li class="col-12 col-md-4 col-lg-4">
           <div class="d-flex align-items-center bg-white text-primary border flex-md-column position-relative">
             <span
-              class="fs-3 fs-md-1 text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
+              class="fs-3 fs-md-1 ff-PaytoneOne text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
               1</span>
             <a href="#" class="d-block hover-img-big">
               <img src="assets/images/art04.jpg"
@@ -178,7 +180,7 @@
         <li class="col-12 col-md-4 col-lg-4">
           <div class="d-flex align-items-center bg-white text-primary border flex-md-column position-relative">
             <span
-              class="fs-3 fs-md-1 text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
+              class="fs-3 fs-md-1 ff-PaytoneOne text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
               2</span>
             <a href="#" class="d-block hover-img-big">
               <img src="assets/images/art05.jpg"
@@ -199,7 +201,7 @@
         <li class="col-12 col-md-4 col-lg-4">
           <div class="d-flex align-items-center bg-white text-primary border flex-md-column position-relative">
             <span
-              class="fs-3 fs-md-1 text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
+              class="fs-3 fs-md-1 ff-PaytoneOne text-center ranking-num bg-white px-2 py-6 p-md-2 border-md-end-1 border-md-bottom-1">
               3</span>
             <a href="#" class="d-block hover-img-big">
               <img src="assets/images/art06.jpg"
@@ -219,7 +221,7 @@
         </li>
         <li class="col-12 col-md-12 col-lg-4">
           <div class="bg-white text-primary d-flex align-items-center border">
-            <p class="fs-3 text-center px-2 py-6 bg-white px-md-4">4</p>
+            <p class="fs-3 ff-PaytoneOne text-center px-2 py-6 bg-white px-md-4">4</p>
             <a href="#" class="d-block hover-img-small">
               <img src="assets/images/art13.jpg" class="img-fluid card-img-top ranking-img border-start border-end"
                 alt="art13">
@@ -236,7 +238,7 @@
         </li>
         <li class="col-12 col-md-12 col-lg-4">
           <div class="bg-white text-primary d-flex align-items-center border">
-            <p class="fs-3 text-center px-2 py-6 bg-white px-md-4">5</p>
+            <p class="fs-3 ff-PaytoneOne text-center px-2 py-6 bg-white px-md-4">5</p>
             <a href="#" class="d-block hover-img-small">
               <img src="assets/images/art07.jpg" class="img-fluid card-img-top ranking-img border-start border-end"
                 alt="art07">
@@ -253,7 +255,7 @@
         </li>
         <li class="col-12 col-md-12 col-lg-4">
           <div class="bg-white text-primary d-flex align-items-center border">
-            <p class="fs-3 text-center px-2 py-6 bg-white px-md-4">6</p>
+            <p class="fs-3 ff-PaytoneOne text-center px-2 py-6 bg-white px-md-4">6</p>
             <a href="#" class="d-block hover-img-small">
               <img src="assets/images/art08.jpg" class="img-fluid card-img-top ranking-img border-start border-end"
                 alt="art08">
@@ -282,57 +284,239 @@
           class="d-block btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary hover-btn-border px-12 py-2">MORE</a>
       </div>
       <!-- Slider main container -->
-      <div class="swiper artist-swiper">
+      <div class="swiper swiper-artist">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper mb-4 mb-xl-7 d-flex align-items-center">
+        <div class="swiper-wrapper mb-6 mb-xl-12 d-flex align-items-center">
           <!-- Slides -->
           <div class="swiper-slide">
-            <div class="position-relative artist-main">
+            <div class="position-relative">
               <img src="assets/images/artist01.jpg" class="img-fluid artist-img card-img-top" alt="artist01">
-              <h3 class="text-white position-absolute artist-name mb-0 display-xl-1">Antony<br
-                  class="d-none d-xl-inline"> Wu</h3>
-              <a href="#" class="fs-6 py-2 px-7 bg-white border position-absolute artist-more btn-more-hover">MORE
-                <div class="triangle"></div>
-              </a>
+              <h3 class="fs-2 text-white position-absolute artist-name fs-md-1 fs-lg-max">Bill<br
+                  class="d-none d-xl-inline"> Chiu
+              </h3>
+              <a href="#"
+              class="bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 position-absolute artist-btn">MORE</a>
             </div>
-            <p class="text-secondary bg-white artist-info p-4 mb-0 mt-3 bg-opacity-white">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+            <p class="text-primary bg-white bg-opacity-white artist-introduce p-6 mt-3">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
           </div>
           <div class="swiper-slide">
             <div class="position-relative">
               <img src="assets/images/artist02.jpg" class="img-fluid artist-img card-img-top" alt="artist02">
-              <h3 class="text-white position-absolute artist-name mb-0 display-xl-1">Antony<br
-                  class="d-none d-xl-inline"> Wu</h3>
-              <a href="#" class="fs-6 py-2 px-7 bg-white border position-absolute artist-more btn-more-hover">MORE
-                <div class="triangle"></div>
-              </a>
+              <h3 class="fs-2 text-white position-absolute artist-name fs-md-1 fs-lg-max">Antony<br
+                  class="d-none d-xl-inline"> Wu
+              </h3>
+              <a href="#"
+              class="bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 position-absolute artist-btn">MORE</a>
             </div>
-            <p class="text-secondary bg-white artist-info p-4 mb-0 mt-3 bg-opacity-white">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+            <p class="text-primary bg-white bg-opacity-white artist-introduce p-6 mt-3">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
           </div>
           <div class="swiper-slide">
             <div class="position-relative">
               <img src="assets/images/artist03.jpg" class="img-fluid artist-img card-img-top" alt="artist03">
-              <h3 class="text-white position-absolute artist-name mb-0 display-xl-1">Antony<br
-                  class="d-none d-xl-inline"> Wu</h3>
-              <a href="#" class="fs-6 py-2 px-7 bg-white border position-absolute artist-more btn-more-hover">MORE
-                <div class="triangle"></div>
-              </a>
+              <h3 class="fs-2 text-white position-absolute artist-name fs-md-1 fs-lg-max">Adam<br
+                  class="d-none d-xl-inline"> Huang
+              </h3>
+              <a href="#"
+              class="bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 position-absolute artist-btn">MORE</a>
             </div>
-            <p class="text-secondary bg-white artist-info p-4 mb-0 mt-3 bg-opacity-white">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+            <p class="text-primary bg-white bg-opacity-white artist-introduce p-6 mt-3">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
           </div>
           <div class="swiper-slide">
             <div class="position-relative">
               <img src="assets/images/artist04.jpg" class="img-fluid artist-img card-img-top" alt="artist04">
-              <h3 class="text-white position-absolute artist-name mb-0 display-xl-1">Antony<br
-                  class="d-none d-xl-inline"> Wu</h3>
-              <a href="#" class="fs-6 py-2 px-7 bg-white border position-absolute artist-more btn-more-hover">MORE
-                <div class="triangle"></div>
-              </a>
+              <h3 class="fs-2 text-white position-absolute artist-name fs-md-1 fs-lg-max">Eva<br
+                  class="d-none d-xl-inline"> Lin
+              </h3>
+              <a href="#"
+              class="bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 position-absolute artist-btn">MORE</a>
             </div>
-            <p class="text-secondary bg-white artist-info p-4 mb-0 mt-3 bg-opacity-white">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+            <p class="text-primary bg-white bg-opacity-white artist-introduce p-6 mt-3">​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
           </div>
         </div>
         <div class="d-flex align-items-center justify-content-center">
           <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 最新藝術品 -->
+  <section class="py-10">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end border-bottom mb-6 mb-xl-12">
+        <h2 class="text-primary fs-2 fs-xl-1 mb-4">Artwork
+          <span class="d-none d-xl-inline-block fs-4 fw-bold ms-4">最新藝術品</span>
+        </h2>
+        <a href="#"
+          class="d-block btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary hover-btn-border px-12 py-2">MORE</a>
+      </div>
+      <ul class="row artwork list-unstyled gy-lg-12" data-masonry='{"percentPosition": true }'>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art09.jpg" alt="art09" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">區塊戀-他的私生活</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art10.jpg" alt="art10" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">夏娃的醜聞</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art02.jpg" alt="art02" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">藍色啤酒海</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art11.jpg" alt="art11" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">沒有人愛我</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art12.jpg" alt="art12" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">不哭不哭眼淚是珍珠</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art03.jpg" alt="art03" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">十分鐘就到</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art04.jpg" alt="art04" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">我這樣有美嗎</h3>
+            </div>
+          </div>
+        </li>
+        <li class="col-6 col-xl-3">
+          <div class="card border-0 border-lg-bottom-1">
+            <div class="p-2 p-lg-6">
+                <a href="#" class="d-block hover-img-artwork">
+                    <img src="./assets/images/art27.jpg" alt="art27" class="img-fluid">
+                    <p class="text-white position-absolute info">唯一想擁有的人，唯一不可以擁有的<br><i class="fa-brands fa-ethereum me-2"></i>300</p>
+                    <span
+                    class="fs-5 bg-white border border-black btn-triangle-secondary hover-btn-bg-secondary hover-btn-triangle-primary px-12 py-2 btn-more position-absolute">MORE</span>
+                </a>
+            </div>
+            <div class="card-body bg-light p-2 px-lg-0 py-lg-4">
+              <h3 class="card-title fs-7 fs-lg-6 fw-lg-bold text-primary">我真的受傷了</h3>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Join Us -->
+  <section class="pt-10">
+    <h2 class="fs-2 fs-lg-1 lh-1 fw-bold text-center mb-8 mb-xl-10">Join Us<br><span class="fs-4">創建並出售你的藝術品</span></h2>
+    <div class="border-4 border-top pt-2">
+      <div class="border-top">
+        <div class="container text-center">
+          <ul class="row list-unstyled py-10 py-xl-20 gy-12 mb-0">
+            <li class="col-md-6 col-xl-3">
+              <div class="card border-0 bg-light">
+                <div class="card-body p-0">
+                  <i class="fa-solid fa-wallet text-secondary fs-lg mb-4"></i>
+                  <h3 class="fs-5 fw-bold mb-6">設置你的錢包</h3>
+                  <p>設置好您選擇的錢包後<br>點擊右上角的錢包圖標進行連接</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-6 col-xl-3">
+              <div class="card border-0 bg-light">
+                <div class="card-body p-0">
+                  <i class="fa-solid fa-pen-ruler text-secondary fs-lg mb-4"></i>
+                  <h3 class="fs-5 fw-bold mb-6">創建您的主頁</h3>
+                  <p>註冊成為會員，編輯您的資料<br>讓大家了解你</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-6 col-xl-3">
+              <div class="card border-0 bg-light">
+                <div class="card-body p-0">
+                  <i class="fa-solid fa-icons text-secondary fs-lg mb-4"></i>
+                  <h3 class="fs-5 fw-bold mb-6">添加你的 NFT</h3>
+                  <p>上傳你的作品<br>添加標題和描述</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-6 col-xl-3">
+              <div class="card border-0 bg-light">
+                <div class="card-body p-0">
+                  <i class="fa-solid fa-tags text-secondary fs-lg mb-4"></i>
+                  <h3 class="fs-5 fw-bold mb-6">列出它們出售</h3>
+                  <p>選擇出售 NFT 的方式<br>並設定價格，等待有緣人</p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -344,7 +528,12 @@
         <p class="ff-NotoSansTC py-6">© ART NFT. All Rights Reserved</p>
       </div>
     </footer>
+    <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- imagesloaded: 讓圖片都完整載入後，重新渲染畫面 -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

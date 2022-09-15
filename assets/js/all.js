@@ -14,25 +14,13 @@ $(function () {
   $(".navbar-search").click(function (e) {
     e.preventDefault();
     $(".navbar-search-bar").toggleClass("d-none");
-  }); // 確保圖片都載入後，以免造成剛進入頁面時圖片會被覆蓋
-  // 首頁
-
-  $('.artwork').imagesLoaded().progress(function () {
-    $('.artwork').masonry(); // 渲染整體畫面
-  }); // 探索頁
-
-  $('.explore').imagesLoaded().progress(function () {
-    $('.explore').masonry(); // 渲染整體畫面
-  }); // 藝術品介紹頁
-
-  $('.art-intro').imagesLoaded().progress(function () {
-    $('.art-intro').masonry(); // 渲染整體畫面
   });
 });
 "use strict";
 
 $(function () {
-  var artistSwiper = new Swiper(".artist-swiper", {
+  //Swiper 輪播
+  var swiperArtist = new Swiper(".swiper-artist", {
     slidesPerView: 1,
     spaceBetween: 0,
     //多欄
@@ -46,24 +34,21 @@ $(function () {
     loop: true,
     pagination: {
       el: ".swiper-pagination"
-    }
-  });
-  var artIntroductionSwiper = new Swiper(".art-introduction-swiper", {
-    slidesPerView: 2,
-    spaceBetween: 24,
-    //多欄
-    breakpoints: {
-      992: {
-        slidesPerView: 3
-      },
-      1200: {
-        slidesPerView: 4
-      }
     },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination"
+    speed: 1000,
+    autoplay: {
+      disableOnInteraction: false,
+      delay: 2500
     }
+  }); // imagesLoaded :讓圖片都完整載入後，重新渲染畫面
+  // 首頁
+
+  $('.artwork').imagesLoaded().progress(function () {
+    $('.artwork').masonry(); // 渲染整個畫面
+  }); // 探索頁
+
+  $('.explore').imagesLoaded().progress(function () {
+    $('.explore').masonry(); // 渲染整個畫面
   });
 });
 //# sourceMappingURL=all.js.map

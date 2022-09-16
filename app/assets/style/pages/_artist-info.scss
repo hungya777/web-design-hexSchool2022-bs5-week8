@@ -26,12 +26,6 @@
   }
 }
 
-.card:hover .card-img {
-  /*   請使用 transform 完成此作業*/
-    transform: rotateY(180deg);
-    
-  }
-
 .nav-tabs {
   border-bottom: 1px solid $primary;
   .nav-link {
@@ -47,13 +41,15 @@
     }
   }
 }
+//區塊左上三角形
 .triangle-top-left {
   @include triangle-top-left(24px, $primary);
 }
+//區塊右上三角形
 .triangle-top-right {
   @include triangle-top-right(24px, $primary);
 }
-
+//設定空白區塊高度
 .block-height {
   height: 0px;
   @include media-breakpoint-up(xl) {

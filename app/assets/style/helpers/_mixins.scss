@@ -35,14 +35,39 @@
 }
 
 //三角形區塊
-@mixin triangle ($color) {
+//區塊右下角三角形
+@mixin triangle-bottom-right ($size, $color) {
   position: relative;
   &::after {
     position: absolute;
     content: '';
-    border-top: 16px solid transparent;
-    border-right: 16px solid $color;
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
     bottom: 0;
+    right: 0;
+  }
+}
+//區塊左上角三角形
+@mixin triangle-top-left ($size, $color) {
+  // position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    top: 0;
+    left: 0;
+  }
+}
+//區塊右上角三角形
+@mixin triangle-top-right ($size, $color) {
+  // position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+    top: 0;
     right: 0;
   }
 }

@@ -2,6 +2,12 @@
 .container {
   max-width: 1320px;  //含左、右各padding 12px
 }
+//寬度百分比
+.w {
+  &-80 {
+    width: 80%;
+  }
+}
 //文字-字體
 .ff-NotoSansTC {
   font-family: 'Noto Sans TC', sans-serif;
@@ -46,6 +52,9 @@
 
 //邊框
 .border {
+  &-10 {
+    border: 10px solid $primary;
+  }
   @include media-breakpoint-up(md) {
     &-md {
       &-1 {
@@ -120,15 +129,43 @@
   }
 }
 
-/*Hover 效果*/
+//margin
+.ms {
+  @include media-breakpoint-up(lg){
+    &-lg {
+      &-end {
+        //負值
+        &-n-10 {
+          margin-right: -40px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl){
+    &-xl {
+      &-end {
+        //負值
+        &-n-12 {
+          margin-right: -42px;
+        }
+      }
+    }
+  }
+}
+
+//Hover 效果
 .hover-link-text-secondary {
   &:hover {
     color: $secondary !important;
   }
 }
-
 //背景透明度
 .bg-opacity-white {
   --bs-bg-opacity: 0.8;
   background-color: rgba(($white), var(--bs-bg-opacity)) !important;
+}
+
+//object-fit (css3 區塊設定)
+.object-fit-cover {
+  object-fit: cover;
 }

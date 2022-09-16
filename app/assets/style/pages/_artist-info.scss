@@ -1,0 +1,62 @@
+.artist-pic {
+  height: 213px;
+  @include media-breakpoint-up(lg) {
+    height: auto;
+  }
+  @include media-breakpoint-up(xl) {
+    height: 264px;
+  }
+}
+
+.artist-owns {
+  img {
+    height: 313px;
+    @include media-breakpoint-up(lg) {
+      height: 270px;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    position: absolute;
+    top: 195px;
+  }
+  li {
+    &:hover img {
+      transform: rotateY(180deg); //Y軸旋轉180度
+    }
+  }
+}
+
+.card:hover .card-img {
+  /*   請使用 transform 完成此作業*/
+    transform: rotateY(180deg);
+    
+  }
+
+.nav-tabs {
+  border-bottom: 1px solid $primary;
+  .nav-link {
+    color: $dark;
+    &:hover {
+      color: $primary;
+      border-color: $light $light $primary;
+    }
+    &.active {
+      color: $primary;
+      background-color: $light;
+      border-color: $primary $primary $light;
+    }
+  }
+}
+.triangle-top-left {
+  @include triangle-top-left(24px, $primary);
+}
+.triangle-top-right {
+  @include triangle-top-right(24px, $primary);
+}
+
+.block-height {
+  height: 0px;
+  @include media-breakpoint-up(xl) {
+    height: 222px;
+  }
+}

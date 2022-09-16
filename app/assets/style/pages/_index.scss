@@ -51,11 +51,11 @@
 //按鈕的三角形顏色
 .btn-triangle {
   &-primary {
-    @include triangle ($primary);
+    @include triangle-bottom-right (16px, $primary);
   }
 
   &-secondary {
-    @include triangle ($secondary);
+    @include triangle-bottom-right (16px,$secondary);
   }
 }
 

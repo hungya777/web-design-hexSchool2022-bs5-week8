@@ -30,7 +30,7 @@
               class="img-fluid">
             </a>
           </h1>
-          <form class="px-lg-9 ms-auto border-lg-start-1 border-primary d-none d-lg-flex">
+          <form class="px-lg-6 px-xl-9 ms-auto border-lg-start-1 border-primary d-none d-lg-flex">
             <input class="form-control bg-light border-0 navbar-search-input px-3 py-lg-10" id="search" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
             <button class="btn border-0 py-3 hover-link-text-secondary" type="submit">
               <i class="fa-solid fa-magnifying-glass fs-5 fs-lg-3 align-middle"></i>
@@ -49,13 +49,13 @@
           <div class="collapse navbar-collapse justify-content-lg-end flex-grow-0 border-top border-dark border-lg-top-0 bg-white bg-lg-transparent" id="navbarMenuContent">
             <ul class="navbar-nav text-center px-3 px-lg-0 menu">
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" aria-current="page" href="explore.html">探索</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-8 py-lg-10 px-xl-12" aria-current="page" href="explore.html">探索</a>
               </li>
               <li class="nav-item border-bottom border-lg-bottom-0 border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-12 py-lg-10" href="#">市值</a>
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-8 py-lg-10 px-xl-12" href="#">市值</a>
               </li>
-              <li class="nav-item border-lg-start-1 border-primary">
-                <a class="nav-link fs-5 fs-lg-6 py-6 px-lg-12 py-lg-10 fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#paymentModal">
+              <li class="nav-item border-lg-start-1 border-primary ms-lg-end-n-10 ms-xl-end-n-12">
+                <a class="nav-link fs-5 fs-lg-6 fw-bold py-6 px-lg-8 py-lg-10 px-xl-12" href="#" data-bs-toggle="modal" data-bs-target="#paymentModal">
                   <i class="fa-solid fa-wallet fs-3 d-none d-lg-block"></i>
                   <span class="d-lg-none">連結錢包</span>
                 </a>
@@ -154,7 +154,7 @@
     <main>
   <section class="py-10">
     <div class="container">
-      <ul class="row explore list-unstyled gy-lg-12" data-masonry='{"percentPosition": true }'>
+      <ul class="row imgLoaded list-unstyled gy-lg-12" data-masonry='{"percentPosition": true }'>
         <li class="col-6 col-xl-3">
           <div class="card border-0 border-lg-bottom-1">
             <div class="p-2 p-lg-6">
@@ -351,6 +351,8 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- imagesloaded: 讓圖片都完整載入後，重新渲染畫面 -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <!-- 載入jQuery -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

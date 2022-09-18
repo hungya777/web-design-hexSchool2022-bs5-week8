@@ -1,0 +1,42 @@
+.rank-price-img {
+  @include size(48px);
+}
+
+.tab-rank {
+  th, td {
+    text-align: end;
+  }
+      
+  .btn-rank-triangle{
+    //摺疊-關
+    @include triangle-bottom-right (32px, $primary);
+    margin-bottom: -8px;
+    &:hover {
+      @include triangle-bottom-right (32px, $secondary);
+    }
+    .fa-plus {
+      position: absolute;
+      display: block;
+      bottom: 2px;
+      right: 2px;
+      z-index: 1;
+    }
+    .fa-minus {
+      position: absolute;
+      display: none;
+      bottom: 2px;
+      right: 2px;
+      z-index: 1;
+    }
+    //摺疊-開
+    &:not(.collapsed) {
+      @include triangle-bottom-right (32px, $secondary);
+      .fa-plus {
+        display: none;
+      }
+      .fa-minus {
+        display: block;
+      }
+    }
+  }
+}

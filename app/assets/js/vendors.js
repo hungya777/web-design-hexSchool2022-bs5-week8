@@ -28,8 +28,8 @@ $(function() {
     $('.artwork').masonry(); // 渲染整個畫面
   });
 
-  // 探索頁
-  $('.explore').imagesLoaded().progress( function() {
-    $('.explore').masonry(); // 渲染整個畫面
+  // 共用
+  $('.imgLoaded').imagesLoaded().progress( function() {
+    $('.imgLoaded').masonry(); // 渲染整個畫面
   });
 });

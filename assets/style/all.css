@@ -18835,4 +18835,77 @@ h1, .h1 {
   }
 }
 
+.rank-price-img {
+  width: 48px;
+  height: 48px;
+}
+
+.tab-rank th, .tab-rank td {
+  text-align: end;
+}
+
+.tab-rank .btn-rank-triangle {
+  position: relative;
+  margin-bottom: -8px;
+}
+
+.tab-rank .btn-rank-triangle::after {
+  position: absolute;
+  content: '';
+  border-top: 32px solid transparent;
+  border-right: 32px solid #000;
+  bottom: 0;
+  right: 0;
+}
+
+.tab-rank .btn-rank-triangle:hover {
+  position: relative;
+}
+
+.tab-rank .btn-rank-triangle:hover::after {
+  position: absolute;
+  content: '';
+  border-top: 32px solid transparent;
+  border-right: 32px solid #E6553B;
+  bottom: 0;
+  right: 0;
+}
+
+.tab-rank .btn-rank-triangle .fa-plus {
+  position: absolute;
+  display: block;
+  bottom: 2px;
+  right: 2px;
+  z-index: 1;
+}
+
+.tab-rank .btn-rank-triangle .fa-minus {
+  position: absolute;
+  display: none;
+  bottom: 2px;
+  right: 2px;
+  z-index: 1;
+}
+
+.tab-rank .btn-rank-triangle:not(.collapsed) {
+  position: relative;
+}
+
+.tab-rank .btn-rank-triangle:not(.collapsed)::after {
+  position: absolute;
+  content: '';
+  border-top: 32px solid transparent;
+  border-right: 32px solid #E6553B;
+  bottom: 0;
+  right: 0;
+}
+
+.tab-rank .btn-rank-triangle:not(.collapsed) .fa-plus {
+  display: none;
+}
+
+.tab-rank .btn-rank-triangle:not(.collapsed) .fa-minus {
+  display: block;
+}
+
 /*# sourceMappingURL=all.css.map */

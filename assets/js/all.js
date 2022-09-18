@@ -4089,10 +4089,10 @@ $(function () {
 
   $('.artwork').imagesLoaded().progress(function () {
     $('.artwork').masonry(); // 渲染整個畫面
-  }); // 探索頁
+  }); // 共用
 
-  $('.explore').imagesLoaded().progress(function () {
-    $('.explore').masonry(); // 渲染整個畫面
+  $('.imgLoaded').imagesLoaded().progress(function () {
+    $('.imgLoaded').masonry(); // 渲染整個畫面
   });
 });
 //# sourceMappingURL=all.js.map

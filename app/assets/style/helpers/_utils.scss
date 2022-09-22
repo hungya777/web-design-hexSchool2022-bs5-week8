@@ -4,10 +4,23 @@
 }
 //寬度百分比
 .w {
+  &-45 {
+    width: 45%;
+  }
+  &-55 {
+    width: 55%;
+  }
   &-80 {
     width: 80%;
   }
 }
+// 人圖像-size
+.pic-size {
+  &-32 {
+    @include size(32px);
+  }
+}
+
 //文字-字體
 .ff-NotoSansTC {
   font-family: 'Noto Sans TC', sans-serif;
@@ -128,6 +141,26 @@
     }
   }
 }
+//border 偽元素
+.border-end-center-space {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    border-right: 1px solid $black;
+    height: 20px;
+    top: 0;
+    right:0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    border-right: 1px solid $black;
+    height: 20px;
+    bottom: 0;
+    right:0;
+  }
+}
 
 //margin
 .ms {
@@ -168,4 +201,9 @@
 //object-fit (css3 區塊設定)
 .object-fit-cover {
   object-fit: cover;
+}
+
+//表單相關
+.form-check-input {
+  border: 1px solid $black;
 }

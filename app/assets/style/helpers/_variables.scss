@@ -62,7 +62,8 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "black":      $black
 ) !default;
 // scss-docs-end colors-map
 
@@ -88,6 +89,7 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
+  "black":      $black
 ) !default;
 // scss-docs-end theme-colors-map
 
